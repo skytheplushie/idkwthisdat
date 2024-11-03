@@ -50,24 +50,24 @@ class TournamentTest(TestCase):
         tournament = Tournament(90, self.first, self.third)
         result = tournament.start()
         self.all_results['first tournament'] = result
-        self.assertTrue(result[2] == 'Lion')
+        self.assertTrue(result[2] == 'Ник')
 
     def test_second_tournament(self):
         tournament = Tournament(90, self.second, self.third)
         result = tournament.start()
-        self.all_results['first tournament'] = result
-        self.assertTrue(result[2] == 'Lion')
+        self.all_results['second tournament'] = result
+        self.assertTrue(result[2] == 'Ник')
 
     def test_third_tournament(self):
         tournament = Tournament(90, self.second, self.first, self.third)
         result = tournament.start()
-        self.all_results['first tournament'] = result
-        self.assertTrue(result[3] == 'Lion')
+        self.all_results['third tournament'] = result
+        self.assertTrue(result[3] == 'Ник')
 
     def setUp(self):
-        self.first = Runner('Isho', 10)
-        self.second = Runner('Sasha', 9)
-        self.third = Runner('Lion', 3)
+        self.first = Runner('Андрей', 10)
+        self.second = Runner('Усэйн', 9)
+        self.third = Runner('Ник', 3)
 
     @classmethod
     def tierDownClass(cls):
