@@ -39,7 +39,7 @@ class Cafe:
     def discuss_guests(self):
         while not self.queue.empty() or any([table.guest for table in tables]):
             for table in self.tables:
-                if table.guest is not None and not table.guest.is_alive:
+                if table.guest is not None and not table.guest.is_alive():
                     print(f'{table.guest.name} ate their meal and left')
                     table.guest = None
                     print(f'table number {table.number} is free')
